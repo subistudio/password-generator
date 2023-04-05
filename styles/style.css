@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&family=JetBrains+Mono&family=League+Spartan:wght@400;700&family=Outfit:wght@500;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,700;1,800&family=Roboto:wght@500;700&display=swap");
+:root {
+  --bg: #18171F;
+  --bg2: #24232C;
+  --grey: #817D92;
+  --white: #E6E5EA;
+  --green: #A4FFAF;
+  --red: #F64A4A;
+  --orange: #FB7C58;
+  --orange: #F8CD65;
+  --f-size32: 32px;
+  --f-size24: 24px;
+  --f-size18: 18px;
+}
+
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+
+body {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700 !important;
+  min-height: 100dvh;
+  padding: 63px 20px;
+  background-color: var(--bg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+body::-webkit-scrollbar {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 18px;
+  background-color: var(--bg2);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--grey);
+}
+
+.container {
+  max-width: 540px;
+  width: 100%;
+}
+.container h1 {
+  font-size: var(--f-size24);
+  color: var(--grey);
+  margin-bottom: 31px;
+  text-align: center;
+}
+.container header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 19px 32px;
+  background-color: var(--bg2);
+  margin-bottom: 24px;
+  min-height: 80px;
+}
+.container header .show-password {
+  word-break: break-all;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: var(--white);
+  font-size: var(--f-size32);
+}
+.container header svg {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  cursor: pointer;
+}
+.container header svg path {
+  fill: var(--green);
+}
+.container header svg:hover path {
+  fill: #FFFFFF;
+}
+.container main {
+  padding: 24px 32px 32px 32px;
+  background-color: var(--bg2);
+}
+.container main .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.container main .flex span:first-of-type {
+  color: var(--white);
+  font-size: var(--f-size18);
+}
+.container main .flex span:last-of-type {
+  color: var(--green);
+  font-size: var(--f-size32);
+}
+.container main .character-range {
+  position: relative;
+  height: 8px;
+  margin-bottom: 42px;
+  margin-top: 27px;
+  background-color: var(--bg);
+  border-radius: 4px;
+}
+.container main .character-range input {
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  outline: 0;
+  border: 0;
+  border-radius: 4px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  margin-bottom: 42px;
+  background-color: transparent;
+}
+.container main .character-range input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--white);
+}
+.container main .character-range span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 8px;
+  border-radius: 4px;
+  background-color: var(--green);
+  z-index: 1;
+}
+.container main .checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 23px;
+}
+.container main .checkbox:last-of-type {
+  margin-bottom: 35px;
+}
+.container main .checkbox label {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--white);
+  margin-right: 24px;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  background-position: center;
+  background-size: auto 11px;
+  background-repeat: no-repeat;
+}
+.container main .checkbox label:hover {
+  border-color: var(--green);
+}
+.container main .checkbox input:checked + label {
+  border-color: var(--green);
+  background-color: var(--green);
+  background-image: url("../imgs/checked.svg");
+}
+.container main .checkbox span {
+  word-break: break-all;
+  color: var(--white);
+  font-size: var(--f-size18);
+}
+.container main .progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 23px 32px;
+  background-color: var(--bg);
+  margin-bottom: 32px;
+}
+.container main .progress > span {
+  color: var(--grey);
+  font-size: var(--f-size18);
+}
+.container main .progress .value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.container main .progress .value > span {
+  color: var(--white);
+  font-size: var(--f-size24);
+}
+.container main .progress .value .useful {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 15px;
+}
+.container main .progress .value .useful span {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-transition-property: background-color, color, border-color;
+  transition-property: background-color, color, border-color;
+  border: 2px solid var(--white);
+  width: 10px;
+  height: 28px;
+}
+.container main .progress .value .useful span:not(:last-of-type) {
+  margin-right: 8px;
+}
+.container main button {
+  background-color: var(--green);
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  width: 100%;
+  height: 65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--bg2);
+  font-size: var(--f-size18);
+  font-weight: 700;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-transition-property: background-color, color, border-color;
+  transition-property: background-color, color, border-color;
+  border: 2px solid transparent;
+}
+.container main button:is(:hover, :active) {
+  background-color: transparent;
+  border-color: var(--green);
+  color: var(--green);
+}
+.container main button:hover svg path {
+  fill: var(--green);
+}
+.container main button svg {
+  margin-left: 24px;
+}
+
+@media (width <= 531px) {
+  :root {
+    --f-size24: 18px;
+    --f-size32: 24px;
+    --f-size18: 16px;
+  }
+  .container header {
+    min-height: 64px;
+  }
+  .container header, .container main {
+    padding: 16px;
+  }
+  .container main .character-range {
+    margin-top: 17px;
+  }
+  .container main .checkbox {
+    margin-bottom: 17px;
+  }
+  .container main .checkbox label {
+    margin-right: 20px;
+  }
+  .container main .checkbox:last-of-type {
+    margin-bottom: 32px;
+  }
+  .container main .progress {
+    padding: 14px;
+    margin-bottom: 16px;
+  }
+  .container main button {
+    height: 56px;
+  }
+}/*# sourceMappingURL=style.css.map */
